@@ -88,24 +88,114 @@
 <main class="w-full max-w-xl flex flex-col gap-8">
 <!-- Brand Identity Section -->
 <header class="text-center space-y-4">
-<div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-lg mb-4">
-<span class="material-symbols-outlined text-on-primary text-3xl" data-icon="account_balance">account_balance</span>
-</div>
+<div class="inline-flex items-center justify-center rounded-lg mb-4 w-[126px] h-[126px]"><img alt="Barangay Poblacion Logo" class="w-full h-full object-contain p-1" src="https://lh3.googleusercontent.com/aida/ADBb0uiKmh8BljwbT70E0msEZApjo4njRXMiKzWfTR5UGi1Hl_JtwsTzt40vm-HYlbaMrCLlYHR9DXntN2qmPPN_hTQdAfxO1cLtsYjb0QsU2-_uyXNth9fjjvejsUiIkCizJut8dwB6EJcskjnOuziGdFlE4H_sDyYX9pzGa5AihKPXASWCwjNOdkZAY-TYSxGler37jm0HMEegkoHjur-r5b_KAx4L8m24cPuABiKBCUMbP8iAQF_JI5LfqE4kXpBEv3TO1AvjLsbwBw"/></div>
 <h1 class="text-3xl font-extrabold tracking-tight font-headline text-primary">Sibulan Poblacion Portal</h1>
-<p class="text-on-surface-variant max-w-sm mx-auto">Establish your digital residency and access local government services with security and ease.</p>
 </header>
 <!-- Registration Form Container -->
 <section class="bg-surface-container-lowest rounded-xl shadow-[0_16px_32px_-12px_rgba(17,28,45,0.06)] overflow-hidden">
 <div class="h-2 bg-gradient-to-r from-primary to-primary-container"></div>
 <form class="p-8 md:p-12 space-y-6">
-<!-- Input Group: Full Name -->
+<!-- Grouped Section for Name Details -->
+<div class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- First Name -->
 <div class="space-y-1.5">
-<label class="font-label text-sm font-semibold text-on-surface uppercase tracking-wider" for="full_name">Full Name</label>
+<label class="font-label text-sm font-semibold text-on-surface uppercase tracking-wider" for="first_name">First Name</label>
 <div class="relative group">
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
 <span class="material-symbols-outlined text-lg" data-icon="person">person</span>
 </div>
-<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/50 rounded-t-lg" id="full_name" name="full_name" placeholder="Juan Dela Cruz" type="text"/>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/50 rounded-t-lg" id="first_name" name="first_name" placeholder="Juan" required="" type="text"/>
+</div>
+</div>
+<!-- Last Name -->
+<div class="space-y-1.5">
+<label class="font-label text-sm font-semibold text-on-surface uppercase tracking-wider" for="last_name">Last Name</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/50 rounded-t-lg" id="last_name" name="last_name" placeholder="Dela Cruz" required="" type="text"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Middle Initial -->
+<div class="space-y-1.5">
+<label class="font-label text-sm font-semibold text-on-surface uppercase tracking-wider" for="middle_initial">Middle Initial</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg" data-icon="person_outline">person_outline</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/50 rounded-t-lg" id="middle_initial" maxlength="2" name="middle_initial" placeholder="M." required="" type="text"/>
+</div>
+</div>
+<!-- Suffix (Optional) -->
+<div class="space-y-1.5">
+<label class="font-label text-sm font-semibold text-on-surface uppercase tracking-wider" for="suffix">Suffix (Optional)</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg" data-icon="badge">badge</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/50 rounded-t-lg" id="suffix" name="suffix" placeholder="Jr., III" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Date of Birth & Gender -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-label text-[11px] font-bold text-on-surface-variant uppercase tracking-widest" for="dob">Date of Birth</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface rounded-t-lg" id="dob" name="dob" required="" type="date"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-label text-[11px] font-bold text-on-surface-variant uppercase tracking-widest" for="gender">Gender</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">wc</span>
+</div>
+<select class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface appearance-none rounded-t-lg" id="gender" name="gender" required="">
+<option disabled="" selected="" value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Address -->
+<div class="space-y-1.5">
+<label class="font-label text-[11px] font-bold text-on-surface-variant uppercase tracking-widest" for="address">Residential Address</label>
+<div class="relative group">
+<div class="absolute top-3 left-3 flex items-start pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">home</span>
+</div>
+<textarea class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/40 rounded-t-lg resize-none" id="address" name="address" placeholder="Purok, Street, Barangay Poblacion, Sibulan" required="" rows="2"></textarea>
+</div>
+</div>
+<!-- Contact & Email -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-label text-[11px] font-bold text-on-surface-variant uppercase tracking-widest" for="contact">Contact Number</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">call</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/40 rounded-t-lg" id="contact" name="contact" placeholder="0917 XXX XXXX" required="" type="tel" placeholder="1234-567-8910" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" />
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-label text-[11px] font-bold text-on-surface-variant uppercase tracking-widest" for="email">Email Address</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">mail</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 transition-all font-body text-on-surface placeholder:text-outline/40 rounded-t-lg" id="email" name="email" placeholder="juan@example.ph" type="email"/>
+</div>
 </div>
 </div>
 <!-- Input Group: Email -->
@@ -160,13 +250,6 @@
 <button class="w-full bg-primary text-on-primary font-semibold py-4 rounded-lg shadow-sm hover:bg-primary-container transition-all active:scale-[0.98] text-center font-headline tracking-wide uppercase text-sm" type="submit">
                         Create Account
                     </button>
-<div class="flex items-start gap-3 p-4 bg-surface-container-low rounded-lg">
-<span class="material-symbols-outlined text-primary text-xl" data-icon="info">info</span>
-<p class="text-xs text-on-surface-variant leading-relaxed">
-                            By creating an account, you agree to our <a class="text-primary font-semibold hover:underline" href="#">Terms of Service</a> and <a class="text-primary font-semibold hover:underline" href="#">Privacy Policy</a> regarding the handling of your institutional data.
-                        </p>
-</div>
-</div>
 </form>
 </section>
 <!-- Footer Navigation -->
@@ -178,16 +261,7 @@
                     <span class="material-symbols-outlined text-sm ml-1" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </p>
-<div class="mt-8 flex justify-center gap-6">
-<div class="flex items-center gap-2 opacity-40">
-<span class="material-symbols-outlined text-sm" data-icon="security">security</span>
-<span class="text-[10px] uppercase font-bold tracking-widest">Secure Portal</span>
-</div>
-<div class="flex items-center gap-2 opacity-40">
-<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
-<span class="text-[10px] uppercase font-bold tracking-widest">Data Protected</span>
-</div>
-</div>
+
 </footer>
 </main>
 <!-- Visual Background Element (Subtle Gradient) -->
